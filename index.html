@@ -18,6 +18,8 @@
     }
     .container {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         margin: 0 auto;
         padding: 0 15%;
         height: 100vh;
@@ -25,7 +27,6 @@
     }
     .slider-wrapper {
         position: relative;
-        margin: auto;
         width: 100%;
     }
     .slider-wrapper .images {
@@ -66,11 +67,15 @@
     .nav > i {
         margin: 0 20px;
     }
-    .nav > i.active {
+    i.active {
         color: blue;
     }
-    .prova {
-        height: 0;
+    .pallini .fa {
+        cursor: pointer; 
+    }
+    .pallini {
+        text-align: center;
+        color: lightgray;
     }
     </style>
     <body>
@@ -88,6 +93,12 @@
                 <div class="next">
                     <i class="fas fa-angle-right"></i>
                 </div>
+            </div>
+            <div class="pallini">
+                    <i class="fa fa-circle active" aria-hidden="true"></i>
+                    <i class="fa fa-circle seconda" aria-hidden="true"></i>
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                    <i class="fa fa-circle provaa" aria-hidden="true"></i>
             </div>
         </div>
     </body>
