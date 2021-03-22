@@ -31,14 +31,18 @@ function init(){
     })
     function creazione_li() {
         let numberIMG=$('.images>img').length;
+        var manyLI='';
         for(i=0;i<numberIMG;i++){
-            $('.pallini').html('<i class="fa fa-circle active" aria-hidden="true" data-value= '+ (i+1)+' ></i>')
-            console.log(prova)
-        
+            manyLI +='<i class="fa fa-circle" aria-hidden="true" data-value= '+ (i+1)+' ></i>';
         }
-
-        console.log('ciao')
+        $('.pallini').html(manyLI)
+        $('.pallini i:first-child').addClass('active')
     }
     creazione_li()
+    $('.pallini i').click(function() {
+        var prova=(this.dataset.value);
+        console.log(prova)
+        console.log(immagineattuale)
+    })
 }
 $(document).ready(init)
