@@ -41,8 +41,12 @@ function init(){
     creazione_li()
     $('.pallini i').click(function() {
         var prova=(this.dataset.value);
-        console.log(prova)
-        console.log(immagineattuale)
+        var immagineattuale=$('.images .active');
+        console.log(prova,immagineattuale[0].dataset.value)
+        if(prova!=immagineattuale[0].dataset.value){
+            console.log('ciaooo')
+        }
+        
     })
 }
 $(document).ready(init)
